@@ -1,18 +1,21 @@
 <template>
-  <nav>
-    <v-toolbar flat height="110px">
+  <nav app>
+    <v-toolbar flat height="110px" app>
       <v-img :src="require('../assets/cleaning-3934664_1920.jpg')"></v-img>
       <v-spacer></v-spacer>
       <v-toolbar-side-icon @click="drawer=!drawer"></v-toolbar-side-icon>
     </v-toolbar>
-    <v-navigation-drawer v-model="drawer" app right class="#A5D8FF">
-      <v-btn @click="drawer=!drawer" class="A5D8FF" flat right>
+    <v-navigation-drawer v-model="drawer" app right>
+      <v-btn @click="drawer=!drawer" flat>
         <v-icon>exit_to_app</v-icon>
       </v-btn>
       <v-list>
-        <v-list-tile>
+        <v-list-tile v-for="item in items" :key="item.text">
+          <v-list-tile-action>
+            <v-icon>{{item.icon}}</v-icon>
+          </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title></v-list-tile-title>
+            <v-list-tile-title>{{item.text}}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -25,7 +28,14 @@ export default {
   name: "NavBar",
   data() {
     return {
-      drawer: false
+      drawer: false,
+      items: [
+        { icon: "dashboard", text: "Home", route: "/" },
+        { icon: "person", text: "About Me", route: "/aboutMe" },
+        { icon: "local_offer", text: "Offerts", route: "/offert" },
+        { icon: "monetization_on", text: "Prices", route: "/prices" },
+        { icon: "contact_phone", text: "Contact", route: "/contact" }
+      ]
     };
   }
 };
@@ -40,6 +50,15 @@ export default {
     height: 100px;
     top: 0px;
     left: 0px;
+  }
+}
+
+.v-navigation-drawer {
+  z-index: 10;
+  background-color: #a5d8ff;
+  .v-btn {
+    position: relative;
+    left: 220px;
   }
 }
 </style>
