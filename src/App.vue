@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import NavBar from "./components/NavBar"
+import NavBar from "./components/NavBar";
 export default {
   name: "App",
-  components: {NavBar},
+  components: { NavBar },
   data() {
     return {
       //
@@ -20,13 +20,17 @@ export default {
 };
 </script>
 
-<style lang="scss">
-*, *::before, *::after{
-  margin:0;
-  padding:0;
+<style lang="scss" scoped>
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
 }
-body{
-  background-color:#D9DCD6;
+* {
+  background-color: #d9dcd6;
 }
 </style>
