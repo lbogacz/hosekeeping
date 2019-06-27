@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     <h1>Lorem ipsum dolor sit</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis inventore consectetur architecto sapiente dolor vero, facilis, itaque laudantium debitis quis quia, odit optio amet ea praesentium iste a illo magni!</p>
 
