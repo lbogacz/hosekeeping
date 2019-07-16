@@ -1,7 +1,6 @@
 <template>
   <footer>
-    <v-footer class="pt-2">
-      <v-spacer></v-spacer>
+    <v-footer class="pa-4">
       <div>
         <p>Design by lbogacz &copy;{{new Date().getFullYear()}}</p>
       </div>
@@ -19,4 +18,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 </style>
