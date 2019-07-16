@@ -1,7 +1,9 @@
 <template>
   <nav app>
-    <v-toolbar flat height="110px" app>
-      <v-img :src="require('../assets/cleaning-3934664_1920.jpg')"></v-img>
+    <v-toolbar flat height="130px" app>
+      <div class="image-logo">
+        <v-img :src="require('../assets/cleaning-3934664_1920.jpg')"></v-img>
+      </div>
       <v-spacer></v-spacer>
       <v-toolbar-side-icon @click="drawer=!drawer"></v-toolbar-side-icon>
     </v-toolbar>
@@ -44,17 +46,18 @@ export default {
 <style lang="scss" scoped>
 .v-toolbar {
   background-color: #1f4f53;
-  .v-img {
+}
+  .image-logo {
     position: relative;
     width: 200px;
-    height: 100px;
+    height: 130px;
     top: 0px;
     left: 0px;
   }
-}
+
 
 .v-navigation-drawer {
-  z-index: 10;
+  // z-index: 10;
   background-color: #a5d8ff;
   .v-btn {
     position: relative;
