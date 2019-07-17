@@ -12,6 +12,10 @@
         <img v-for="picture in pictures" :key="picture.img " :src="picture.img" />
       </div>
     </div>
+    <div class="home-header">
+    <h3>Lorem ipsum dolor, sit.</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores officiis quas ea quis vero quisquam reprehenderit dolorem consequatur similique architecto, beatae numquam, obcaecati quaerat ipsum excepturi eius doloremque aliquam laudantium!</p>
+    </div>
   </div>
 </template>
  <script>
@@ -34,7 +38,7 @@ export default {
 <style lang="scss" scoped>
 .home-header {
   h1,
-  h2,
+  h2,h3,
   p {
     text-align: center;
     margin: auto;
@@ -51,7 +55,7 @@ export default {
 
 .images {
   img {
-    width: 100vw;
+    width: 100%;
     padding-bottom: 15px;
   }
 }
@@ -100,19 +104,32 @@ export default {
 }
 
 @media (min-width: 950px) {
-  .images {
+  .home-header {
+    h1,
+    h2,
+    p {
+      text-align: center;
+      margin: auto;
+      padding: 15px;
+      font-size:140%;
+    }
+    h1,
+    h2,
+    p {
+      max-width: 80%;
+    }
+  }
 
+  .images {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: center;
-    align-content: flex-start;
-    margin-left:25%;
+    justify-content: center;
     max-height: 100vh;
   }
   img {
-    padding: 10px 10px 25px 25px;
     max-width: 25vw;
+    padding: 10px;
   }
 }
 </style>
