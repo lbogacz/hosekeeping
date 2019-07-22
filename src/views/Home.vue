@@ -1,11 +1,11 @@
 <template>
   <div class="home">
     <div class="home-header">
-      <h1>Lorem ipsum dolor sit</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis inventore consectetur architecto sapiente dolor vero, facilis, itaque laudantium debitis quis quia, odit optio amet ea praesentium iste a illo magni!</p>
+      <h1>Shine Cleaning services</h1>
+      <p>Welcome to the cleaning company website. We provide professional cleaning services, we adjust the range of our services to individual wishes and preferences of clients. We work both for private individuals and for various types of companies and institutions. Our professionalism and commitment to the work performed has already been appreciated by many customers.</p>
 
-      <h2>Lorem ipsum dolor, sit.</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores officiis quas ea quis vero quisquam reprehenderit dolorem consequatur similique architecto, beatae numquam, obcaecati quaerat ipsum excepturi eius doloremque aliquam laudantium!</p>
+      <p>Our offer of cleaning services is directed to those people and companies who for various reasons need professional help in maintaining order and cleanliness.</p>
+      <p>Only regular cleaning will ensure that the rooms are clean and user-friendly. A good alternative for indyvidual cleaning, which is usually lacking in time and willingness, is the employment of a cleaning lady who will take over your not liked duties related to cleaning.</p>
     </div>
     <div class="main-content">
       <div class="images">
@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="home-header">
-    <h3>Lorem ipsum dolor, sit.</h3>
+      <h2>Lorem ipsum dolor, sit.</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores officiis quas ea quis vero quisquam reprehenderit dolorem consequatur similique architecto, beatae numquam, obcaecati quaerat ipsum excepturi eius doloremque aliquam laudantium!</p>
     </div>
   </div>
@@ -38,7 +38,8 @@ export default {
 <style lang="scss" scoped>
 .home-header {
   h1,
-  h2,h3,
+  h2,
+  h3,
   p {
     text-align: center;
     margin: auto;
@@ -106,16 +107,19 @@ export default {
 @media (min-width: 950px) {
   .home-header {
     h1,
-    h2,
+    h2 {
+      font-size: 200%;
+      text-align: center;
+      margin: auto;
+      padding: 15px;
+      max-width: 80%;
+    }
+
     p {
       text-align: center;
       margin: auto;
       padding: 15px;
-      font-size:140%;
-    }
-    h1,
-    h2,
-    p {
+      font-size: 140%;
       max-width: 80%;
     }
   }
