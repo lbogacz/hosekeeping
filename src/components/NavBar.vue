@@ -12,7 +12,7 @@
         <v-icon>exit_to_app</v-icon>
       </v-btn>
       <v-list>
-        <v-list-tile v-for="item in items" :key="item.text">
+        <v-list-tile v-for="item in items" :key="item.text" router :to="item.route">
           <v-list-tile-action>
             <v-icon>{{item.icon}}</v-icon>
           </v-list-tile-action>
@@ -28,7 +28,7 @@
       </div>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn flat v-for="item in items" :key="item.text" class="title white--text">{{item.text}}</v-btn>
+        <v-btn flat v-for="item in items" :key="item.text"  router :to="item.route" class="title white--text">{{item.text}}</v-btn>
       </v-toolbar-items>
     </v-toolbar>
   </nav>
@@ -41,11 +41,11 @@ export default {
     return {
       drawer: false,
       items: [
-        { icon: "dashboard", text: "Home", route: "/" },
-        { icon: "person", text: "About Me", route: "/aboutMe" },
-        { icon: "local_offer", text: "Offerts", route: "/offert" },
-        { icon: "monetization_on", text: "Prices", route: "/prices" },
-        { icon: "contact_phone", text: "Contact", route: "/contact" }
+        { icon: "dashboard", text: "Home", route: '/' },
+        { icon: "person", text: "About Me", route: '/about' },
+        { icon: "local_offer", text: "Offerts", route: '/offerts' },
+        { icon: "monetization_on", text: "Prices", route: '/prices' },
+        { icon: "contact_phone", text: "Contact", route: '/contact' }
       ]
     };
   }
