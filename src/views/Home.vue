@@ -67,6 +67,7 @@ export default {
 }
 
 .about-company {
+  text-align:center;
   img {
     display: none;
   }
