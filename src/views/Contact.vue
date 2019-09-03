@@ -2,18 +2,18 @@
   <div class="contact">
     <p>If you are interested in our cleaning services, please contact us. We are happy to answer all your questions.</p>
     <div class="contact__form">
-      <form action>
+      <form method="POST" action="https://formspree.io/lukas.bogacz@gmail.com">
         <span>
-          <input type="text" name="name" class="name" placeholder="name" required />
+          <input type="text" name="name" id="name" placeholder="name" required />
         </span>
         <span>
-          <input type="email" name="email" class="email" placeholder="email" required />
+          <input type="email" name="email" id="email" placeholder="email" required />
         </span>
         <span>
-          <textarea name="message" class="message" placeholder="message" required></textarea>
+          <textarea name="message" id="message" placeholder="message" required></textarea>
         </span>
         <span>
-          <input type="submit" value="send" class="button" />
+          <input type="submit" value="send" id="button" />
         </span>
       </form>
     </div>
