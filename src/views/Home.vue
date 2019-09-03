@@ -1,7 +1,12 @@
 <template>
   <div class="home">
     <div class="home-header">
-      <h1>Shine Cleaning services</h1>
+      <h1>
+        <span>
+          <img src="../assets/diamond-158431_1280.png" />
+        </span>
+        Shine cleaning services
+      </h1>
       <p>Welcome to the cleaning company website. We provide professional cleaning services, we adjust the range of our services to individual wishes and preferences of clients. We work both for private individuals and for various types of companies and institutions. Our professionalism and commitment to the work performed has already been appreciated by many customers.</p>
 
       <p>Our offer of cleaning services is directed to those people and companies who for various reasons need professional help in maintaining order and cleanliness.</p>
@@ -42,6 +47,12 @@ export default {
 
 <style lang="scss" scoped>
 .home-header {
+  @media (min-width: 500px) {
+    font-size: 15px;
+  }
+  @media (min-width: 700px) {
+    font-size: 16px;
+  }
   h1,
   h2,
   h3,
@@ -53,9 +64,37 @@ export default {
   h1,
   h2 {
     max-width: 250px;
+    @media (min-width: 600px) {
+      max-width: 350px;
+    }
+    @media (min-width: 700px) {
+      max-width: 400px;
+    }
+    @media (min-width: 800px){
+      max-width: 500px;
+
+    }
   }
   p {
     max-width: 400px;
+    @media (min-width: 600px) {
+      max-width: 500px;
+    }
+    @media (min-width: 700px) {
+      max-width: 550px;
+    }
+    @media (min-width: 800px){
+
+    }
+  }
+
+  span {
+    img {
+      height: 10vh;
+      display: block;
+      text-align: center;
+      margin: auto;
+    }
   }
 }
 
@@ -67,39 +106,9 @@ export default {
 }
 
 .about-company {
-  text-align:center;
+  text-align: center;
   img {
     display: none;
-  }
-}
-@media (min-width: 500px) {
-  .home-header {
-    font-size: 15px;
-  }
-}
-
-@media (min-width: 600px) {
-  .home-header {
-    h1,
-    h2 {
-      max-width: 350px;
-    }
-    p {
-      max-width: 500px;
-    }
-  }
-}
-
-@media (min-width: 700px) {
-  .home-header {
-    font-size: 16px;
-    h1,
-    h2 {
-      max-width: 400px;
-    }
-    p {
-      max-width: 550px;
-    }
   }
 }
 
@@ -256,18 +265,18 @@ export default {
   }
 }
 
-@media(min-width:1900px){
-  .about-company{
-    p{
-      top:-80px;
+@media (min-width: 1900px) {
+  .about-company {
+    p {
+      top: -80px;
     }
   }
 }
 
-@media(min-width:2060px){
-  .about-company{
-    p{
-      top:-100px;
+@media (min-width: 2060px) {
+  .about-company {
+    p {
+      top: -100px;
     }
   }
 }
